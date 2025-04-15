@@ -1,0 +1,6 @@
+@BlinkIt.Gateway_HostAddress = http://localhost:5017
+
+GET {{BlinkIt.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
