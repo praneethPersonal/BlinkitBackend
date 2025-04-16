@@ -43,7 +43,7 @@ public class BlinkItRepository : IBlinkItRepository
 
     public List<Product> GetProductsWithPrefix(string prefix)
     {
-        var filter = Builders<Product>.Filter.Regex("product_name", new BsonRegularExpression($"^{prefix}", "i"));
+        var filter = Builders<Product>.Filter.Regex("product_name", new BsonRegularExpression($".*{prefix}.*", "i"));
         var productsWithPrefix = _products.Find(filter).Limit(50).ToList();
         return productsWithPrefix;
     }

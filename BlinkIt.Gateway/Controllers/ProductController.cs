@@ -36,7 +36,7 @@ namespace BlinkIt.Gateway.Controllers
             return Ok(product);
         }
 
-        [HttpGet("product/:keyword")]
+        [HttpGet("productSearch")]
         public IActionResult GetProductByKeyword(string keyword)
         {
             if (keyword == null || keyword.Length < 2)
@@ -45,6 +45,10 @@ namespace BlinkIt.Gateway.Controllers
             }
             
             var products = _productService.GetAllProductsWithKeyWord(keyword);
+            if (products.Count == 0)
+            {
+                return NotFound("Product not found.");
+            }
             return Ok(products);
         }
     }
