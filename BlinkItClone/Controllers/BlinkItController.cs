@@ -123,6 +123,7 @@ namespace BlinkItClone.Controllers
 
 
 
+        /*
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
@@ -194,6 +195,7 @@ namespace BlinkItClone.Controllers
 
             return Unauthorized(new { Message = message });
         }
+        */
 
 
         [HttpPost("seller/addProducts")]

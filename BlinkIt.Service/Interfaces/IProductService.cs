@@ -8,5 +8,6 @@ namespace BlinkIt.Service.Interfaces
 
         public Product GetProductDetails(string productId);
         public List<Product> GetAllProductsWithKeyWord(string keyword);
+        public List<Category> GetCategory();
     }
 }

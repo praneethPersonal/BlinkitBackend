@@ -30,7 +30,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IBlinkItRepository, BlinkItRepository>();
-builder.Services.AddTransient<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 
