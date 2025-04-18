@@ -29,6 +29,11 @@ namespace BlinkIt.Service.Implementation
             var products = _blinkItRepository.GetProductsWithPrefix(keyword);
             return products;
         }
-
+        
+        public List<Category> GetCategory()
+        {
+            var products = _blinkItRepository.GetCategoryFromRepo();
+            return products;
+        }
     }
 }

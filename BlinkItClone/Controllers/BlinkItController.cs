@@ -17,7 +17,7 @@ namespace BlinkItClone.Controllers
             _serviceCall = serviceCall;
         }
 
-        [HttpGet("category")]
+        /*[HttpGet("category")]
         public IActionResult GetCategories()
         {
             var products = _serviceCall.GetCategory();
@@ -26,9 +26,9 @@ namespace BlinkItClone.Controllers
                 return NotFound("No products found for the given category.");
             }
             return Ok(products);
-        }
+        }*/
 
-        [HttpGet("products")]
+        /*[HttpGet("products")]
         public IActionResult GetProductsByCategory()
         {
             var products = _serviceCall.GetProductByCategory();
@@ -38,8 +38,8 @@ namespace BlinkItClone.Controllers
                 return NotFound("Product not found.");
             }
             return Ok(products);
-        }
-        [HttpGet("product")]
+        }*/
+        /*[HttpGet("product")]
         public IActionResult GetProductDetails([FromQuery] string productName)
         {
             var product = _serviceCall.GetProductDetails(productName);
@@ -48,7 +48,7 @@ namespace BlinkItClone.Controllers
                 return NotFound("Product not found.");
             }
             return Ok(product);
-        }
+        }*/
         
         //not neccessary
         [HttpPost("addCategory")]
@@ -123,6 +123,7 @@ namespace BlinkItClone.Controllers
 
 
 
+        /*
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
@@ -194,6 +195,7 @@ namespace BlinkItClone.Controllers
 
             return Unauthorized(new { Message = message });
         }
+        */
 
 
         [HttpPost("seller/addProducts")]
@@ -268,9 +270,6 @@ namespace BlinkItClone.Controllers
             {
                 return BadRequest("Current password is incorrect or could not change password.");
             }
-
-           
-
         }
 
         [HttpPost("getProductsBySeller")]

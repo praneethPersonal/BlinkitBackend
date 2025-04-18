@@ -51,5 +51,17 @@ namespace BlinkIt.Gateway.Controllers
             }
             return Ok(products);
         }
+        
+        [HttpGet("category")]
+        public IActionResult GetCategories()
+        {
+            var products = _productService.GetCategory();
+            if (products == null)
+            {
+                return NotFound("No products found for the given category.");
+            }
+            return Ok(products);
+        }
+        
     }
 }
