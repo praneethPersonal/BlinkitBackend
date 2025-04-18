@@ -31,9 +31,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IBlinkItRepository, BlinkItRepository>();
 builder.Services.AddTransient<ICategoryService, CategoryService>();
-builder.Services.AddTransient<IAuthService, AuthService>();
-builder.Services.AddTransient<IAuthRepository, AuthRepository>();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
